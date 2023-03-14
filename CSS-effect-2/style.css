@@ -1,0 +1,83 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Condensed:wght@400;700&display=swap');
+* {
+  margin: 0;
+  box-sizing: border-box;
+}
+body {
+  display: flex;
+  gap: 3vw;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  font-family: 'Roboto Condensed', sans-serif;
+  background-color: rgb(119, 115, 115);
+}
+
+/* Оформление карточек */
+.card {
+  cursor: pointer;
+  display: grid;
+  align-content: space-between;
+  outline-offset: -10px;
+  width: 300px;
+  height: 380px;
+  box-shadow: 0 60px 50px -50px black;
+  border-radius: 10px;
+  color: transparent;
+  padding: 16px;
+  transition: all 1s 0.3s, background 0.8s;
+}
+.card1 {
+  background: url(https://tonyshow.notion.site/image/https%3A%2F%2Fi.ibb.co%2FRhSWWzm%2Fimage.png?id=91dfcbeb-319e-4c17-91e6-882b40281702&table=block&spaceId=db720a59-ac09-40e8-815b-33612ed3b065&width=580&userId=&cache=v2);
+  background-size: 420px;
+  background-position: 60% 18%;
+  filter: contrast(110%) brightness(120%);
+}
+.card2 {
+  background: url(https://tonyshow.notion.site/image/https%3A%2F%2Fi.ibb.co%2FM2BRD4f%2Fimage.png?id=6123ad10-a414-4d77-a749-cecc373d2780&table=block&spaceId=db720a59-ac09-40e8-815b-33612ed3b065&width=580&userId=&cache=v2);
+  background-size: 330px;
+  background-position: 35% 38%;
+  filter: contrast(100%) brightness(160%);
+}
+.card3 {
+  background: url(https://tonyshow.notion.site/image/https%3A%2F%2Fi.ibb.co%2FTw6F9km%2F8.jpg?id=354f1f38-6db5-47cf-8a58-689e93b5709c&table=block&spaceId=db720a59-ac09-40e8-815b-33612ed3b065&width=580&userId=&cache=v2);
+  background-size: 410px;
+  background-position: 40% 18%;
+  filter: contrast(105%) brightness(93%);
+}
+
+/* СТили при наведении */
+.card:hover {
+  outline: 1px solid white;
+  color: white;
+}
+
+.card:hover .card_title {
+  text-shadow: 0 2px 4px black;
+}
+
+.card1:hover {
+  background-size: 666px;
+  background-position: 17% 45%;
+}
+.card2:hover {
+  background-size: 450px;
+  background-position: -47% 83%;
+}
+.card3:hover {
+  background-size: 544px;
+  background-position: -19% 26%;
+}
+
+/* Вспомогательные элементы */
+.card_title {
+  font-size: 24px;
+  font-weight: 700;
+  text-shadow: 0 2px 4px transparent;
+  transition: text-shadow 1s 0.2s;
+}
+.card_social {
+  font-size: 18px;
+  display: grid;
+  grid-gap: 8px;
+}
