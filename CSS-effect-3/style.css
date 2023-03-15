@@ -1,0 +1,132 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito:wght@200;300;400;600;700&display=swap');
+
+* {
+  margin: 0;
+  box-sizing: border-box;
+}
+html {
+  overflow: hidden;
+  height: 100%;
+}
+
+body {
+  font-family: 'Nunito', sans-serif;
+  overflow-x: hidden;
+  overflow-y: auto;
+  height: 100%;
+  perspective: 1px;
+}
+
+.block {
+  background: grey;
+  height: 100vh;
+  position: relative;
+  background: #49516d;
+  padding: 8vw 10vw;
+  display: grid;
+  align-items: center;
+  transform-style: preserve-3d;
+}
+.block > * {
+  position: relative;
+}
+.block::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  right: 0;
+  left: 0;
+  bottom: 0;
+  background-size: cover;
+  box-shadow: 0 2px 8px #000;
+}
+.block1,
+.block5 {
+  display: grid;
+  justify-items: center;
+  color: #fff;
+}
+.block1,
+.block3 {
+  z-index: 1;
+}
+
+.block3 {
+  justify-items: end;
+}
+
+.block1::before {
+  background-image: url(https://mobimg.b-cdn.net/v3/fetch/74/74351b3be84e3c111bd71cba251e905c.jpeg?w=1470&r=0.5625);
+}
+.block2::before {
+  background-image: url(https://uprostim.com/wp-content/uploads/2021/04/image120-2.jpg);
+}
+.block3::before {
+  background-image: url(https://vsegda-pomnim.com/uploads/posts/2022-04/1649118891_88-vsegda-pomnim-com-p-krasivie-peizazhi-prirodi-leto-foto-101.jpg);
+}
+.block4::before {
+  background-image: url(https://million-wallpapers.ru/wallpapers/3/4/18163372706722792224/osennij-les-mezhdu-gorami-i-ozerom.jpg);
+}
+
+h1 {
+  font-size: 100px;
+  text-shadow: 1px 2px 4px #000;
+}
+h2 {
+  font-size: 100px;
+  text-shadow: 1px 2px 4px #000;
+}
+.card {
+  width: 700px;
+  padding: 64px 72px;
+  color: #fff;
+  border-radius: 16px;
+  background-color: rgba(65, 63, 95, 0.7);
+  border: 2px solid rgba(245, 243, 243, 0.274);
+  box-shadow: 2px 3px 16px rgba(0, 0, 0, 0.5);
+  backdrop-filter: blur(2px);
+}
+.card__title {
+  font-weight: bold;
+  font-size: 42px;
+  margin-bottom: 16px;
+}
+.card__desc {
+  font-size: 24px;
+  line-height: 1.6em;
+}
+
+img {
+  position: absolute !important;
+  top: 20%;
+  left: 20%;
+  width: 400px;
+  box-shadow: 2px 3px 8px rgba(0, 0, 0, 0.8);
+  border-radius: 8px;
+  padding: 10px;
+  background-color: rgba(65, 63, 95, 0.7);
+}
+img:nth-child(2) {
+  position: absolute !important;
+  top: 42%;
+  width: 400px;
+}
+
+/* Parallax */
+h1 {
+  transform: translateZ(0.4px) scale(0.6);
+}
+.block2,
+.block4 {
+  background-color: transparent;
+}
+.block2::before,
+.block4::before {
+  transform: translateZ(-1px) scale(2);
+}
+img {
+  transform: rotate(4deg) translateZ(0.25px) scale(0.75);
+}
+img:nth-child(2) {
+  transform: rotate(-8deg) translateZ(0.4px) scale(0.6);
+}
