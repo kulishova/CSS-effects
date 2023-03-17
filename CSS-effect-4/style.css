@@ -1,0 +1,109 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito:wght@200;300;400;600;700&display=swap');
+
+* {
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Nunito', sans-serif;
+  height: 100vh;
+  display: grid;
+  align-content: center;
+  background: linear-gradient(45deg, #91eae4, #86a8e7, #7f7fd5);
+}
+
+h1,
+h2 {
+  text-align: center;
+  font-size: 5vw;
+  color: #fff;
+}
+
+h2 {
+  font-size: 4vw;
+  color: #000;
+}
+
+.animate {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  overflow: hidden;
+}
+.animate div {
+  --size: 30px;
+  position: absolute;
+  bottom: -150px;
+  left: 8%;
+  width: var(--size);
+  height: var(--size);
+  background-color: #ffffff4d;
+  animation: animate 25s linear infinite;
+}
+.animate div:nth-child(2) {
+  --size: 150px;
+  left: 10%;
+  animation-duration: 10s;
+}
+.animate div:nth-child(3) {
+  --size: 50px;
+  left: 26%;
+  animation-duration: 15s;
+  animation-delay: 2s;
+}
+.animate div:nth-child(4) {
+  --size: 100px;
+  left: 35%;
+  animation-duration: 12s;
+  animation-delay: 4s;
+}
+.animate div:nth-child(5) {
+  --size: 30px;
+  left: 42%;
+  animation-duration: 17s;
+}
+.animate div:nth-child(6) {
+  --size: 70px;
+  left: 49%;
+  animation-duration: 22s;
+  animation-delay: 2s;
+}
+.animate div:nth-child(7) {
+  --size: 150px;
+  left: 55%;
+  animation-duration: 25s;
+  animation-delay: 1s;
+}
+.animate div:nth-child(8) {
+  --size: 30px;
+  left: 65%;
+  animation-duration: 15s;
+  animation-delay: 3s;
+}
+.animate div:nth-child(9) {
+  --size: 60px;
+  left: 70%;
+  animation-duration: 7s;
+}
+.animate div:nth-child(10) {
+  --size: 150px;
+  left: 80%;
+  animation-duration: 10s;
+  animation-delay: 4s;
+}
+
+@keyframes animate {
+  from {
+    transform: translateY(0) rotate(0deg);
+    border-radius: 0;
+    opacity: 1;
+  }
+  to {
+    transform: translateY(-130vh) rotate(720deg);
+    border-radius: 50%;
+    opacity: 0;
+  }
+}
